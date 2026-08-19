@@ -1,0 +1,21 @@
+# Ambientes e caches Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Artefatos locais de build e empacotamento
+build/
+dist/
+installer-output/
+*.spec
+
+# Dados locais do aplicativo
+*.sqlite3
+*.db
+*.log
+
+# Configurações locais de editores e sistema
+.idea/
+.vscode/
+Thumbs.db
+Desktop.ini

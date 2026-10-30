@@ -1,7 +1,9 @@
 ; Requer Inno Setup 6: https://jrsoftware.org/isinfo.php
 
 #define MyAppName "JW Notícias Feed"
-#define MyAppVersion "0.1.0"
+#ifndef MyAppVersion
+  #define MyAppVersion "0.3.0"
+#endif
 #define MyAppExeName "JWNoticiasFeed.exe"
 
 [Setup]
@@ -11,7 +13,12 @@ AppVersion={#MyAppVersion}
 DefaultDirName={autopf}\JWNoticiasFeed
 DefaultGroupName={#MyAppName}
 OutputDir=installer-output
-OutputBaseFilename=JWNoticiasFeed-Setup
+OutputBaseFilename=JWNoticiasFeed-Setup-{#MyAppVersion}
+SetupIconFile=assets\icon.ico
+UninstallDisplayIcon={app}\{#MyAppExeName}
+; Fecha o programa em execução (e seu ícone da bandeja) ao atualizar/desinstalar.
+CloseApplications=yes
+RestartApplications=no
 Compression=lzma
 SolidCompression=yes
 PrivilegesRequired=lowest

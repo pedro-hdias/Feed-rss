@@ -19,3 +19,6 @@ installer-output/
 .vscode/
 Thumbs.db
 Desktop.ini
+
+# Testes
+.pytest_cache/

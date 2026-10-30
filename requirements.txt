@@ -1,5 +1,5 @@
-requests>=2.31
-beautifulsoup4>=4.12
-wxPython>=4.2
-accessible_output2>=0.17
-pyinstaller>=6.0
+requests>=2.31,<3
+beautifulsoup4>=4.12,<5
+wxPython>=4.2,<4.3
+accessible_output2>=0.17,<0.18
+pyinstaller>=6.0,<7

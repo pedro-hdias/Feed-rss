@@ -24,5 +24,8 @@ fi
 
 "$VENV_PYTHON" -m pip install --upgrade pip
 "$VENV_PYTHON" -m pip install -r requirements.txt
-"$VENV_PYTHON" -m PyInstaller --noconfirm --clean --windowed --name JWNoticiasFeed main.py
+"$VENV_PYTHON" -m PyInstaller --noconfirm --clean --windowed --name JWNoticiasFeed \
+  --add-data "assets/icon.ico:assets" \
+  --collect-all accessible_output2 --collect-all libloader --collect-all platform_utils \
+  main.py
 echo "Executável criado em: $PROJECT_DIR/dist/JWNoticiasFeed/JWNoticiasFeed"
